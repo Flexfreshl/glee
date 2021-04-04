@@ -364,4 +364,154 @@
     }
 }
 
+.product {
+    &__container {
+        max-width: 1200px;
+    }
+    &__title {
+        margin: 70px 0 30px;
+    }
+    &__btn {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    &__item-btn {
+        padding: 0;
+        border: none;
+        background-color: inherit;
+        color: $default;
+        font-size: 16px;
+        line-height: 22px;
+        @extend %dmsans-700;
+    }
+    &__item-btn+&__item-btn {
+        margin-left: 20px;
+    }
+    .mixitup-control-active {
+        color: #292929;
+    }
+    &__items {
+        display: grid;
+        min-height: 600px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+    &__item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-color: #fff;
+        width: 260px;
+        height: 380px;
+        &:hover {
+            transition: all 1s;
+            cursor: pointer;
+        }
+    }
+    &__images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        display: none;
+        z-index: 2;
+    }
+    &__search,
+    &__cart,
+    &__liked {
+        position: absolute;
+        top: 190px;
+        padding: 12px;
+        border-radius: 50%;
+        background-color: #edeff1;
+        display: flex;
+        align-items: center;
+        transition: all .5s;
+        &:hover {
+            background-color: #6a93aa;
+        }
+    }
+    &__search {
+        left: 60px;
+    }
+    &__cart {
+        left: 106px;
+    }
+    &__liked {
+        right: 60px;
+    }
+    &__images-link path {
+        fill: #6a93aa;
+    }
+    &__images-link:hover path {
+        fill: #edeff1;
+    }
+    &__excerpt {
+        margin-top: 170px;
+        display: grid;
+        height: 370px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 30px;
+    }
+    &__excerpt-items {
+        background-color: #feefe2;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+    }
+    &__excerpt-img {
+        position: absolute;
+        top: -90px;
+        left: 180px;
+    }
+    &__excerpt-item {
+        max-width: 390px;
+        padding-right: 70px;
+    }
+    &__excerpt-title {
+        color: #243f4d;
+        font-size: 26px;
+        line-height: 32px;
+        @extend %dmsans-500;
+        margin-bottom: 20px;
+    }
+    &__excerpt-text {
+        color: #243f4d;
+        font-size: 16px;
+        line-height: 24px;
+        @extend %rubik-400;
+        margin-bottom: 50px;
+    }
+    &__excerpt-link {
+        padding: 20px 80px 20px 20px;
+        border: 1px solid #6a93aa;
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 12px;
+        @extend %dmsans-500;
+        color: #436372;
+        display: inline-block;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 10px;
+            background-image: url(../images/arrowblack.png);
+            top: 22px;
+            right: 20px;
+        }
+        &:hover {
+            transform: translate(0, -10px);
+            border: 1px solid #fff;
+            background-color: #436372;
+            color: #fff;
+        }
+    }
+}
+
 @import 'media';
+// <p class="product__text">Wooden radio </p><div class="product__price"><sup class="product__ye">$</sup>29.00</div>
