@@ -4,10 +4,16 @@
 @import 'libs';
 @import 'global';
 .header__inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000000000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 0 45px 0;
+    padding: 25px 15px;
+    background-color: #fff;
 }
 
 .logo {
@@ -68,7 +74,7 @@
         border-radius: 50%;
         width: 50px;
         height: 50px;
-        margin-right: 30px;
+        margin-right: 20px;
         position: relative;
     }
     .user-nav__img-search {
@@ -83,11 +89,11 @@
     }
     &__num {
         position: absolute;
-        width: 16px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
         background-color: #fff;
         border-radius: 50%;
-        top: -7px;
+        top: -10px;
         right: -9px;
         text-align: center;
         z-index: 1000000000;
@@ -195,6 +201,15 @@
         border: none;
         color: #fff;
         cursor: pointer;
+        transition: all .7s;
+        &:hover {
+            transform: scale(1.2);
+            border: 1px solid #fff;
+            border-radius: 10px;
+            background-color: #83c4e2;
+            color: #fff;
+            box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.603);
+        }
     }
 }
 
@@ -244,6 +259,7 @@
 }
 
 .top-slider {
+    margin-top: 100px;
     background-color: #fcd7b6;
     padding: 100px 0;
     background-image: url('../images/slider-bg.png');
@@ -278,14 +294,24 @@
         line-height: 12px;
         @extend %rubik-500;
         position: relative;
+        transition: all .7s;
+        display: inline-block;
         &::before {
             content: '';
             position: absolute;
             width: 22px;
             height: 10px;
             background-image: url('../images/arrow.png');
-            top: 25px;
+            top: 22px;
             right: 20px;
+        }
+        &:hover {
+            transform: scale(1.2);
+            border: 1px solid #fff;
+            border-radius: 10px;
+            background-color: #83c4e2;
+            color: #fff;
+            box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.603);
         }
     }
 }
