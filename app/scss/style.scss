@@ -189,7 +189,7 @@
     }
     &__btn {
         background-color: #a3bbc8;
-        padding: 12px 18px;
+        padding: 12px;
         font-size: 20px;
         line-height: 26px;
         border: none;
@@ -383,6 +383,7 @@
         font-size: 16px;
         line-height: 22px;
         @extend %dmsans-700;
+        outline: none;
     }
     &__item-btn+&__item-btn {
         margin-left: 20px;
@@ -448,7 +449,7 @@
         fill: #edeff1;
     }
     &__excerpt {
-        margin-top: 170px;
+        margin-top: 120px;
         display: grid;
         height: 370px;
         grid-template-columns: repeat(2, 1fr);
@@ -461,6 +462,7 @@
         justify-content: flex-end;
         align-items: center;
         position: relative;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.486);
     }
     &__excerpt-img {
         position: absolute;
@@ -495,6 +497,7 @@
         color: #436372;
         display: inline-block;
         position: relative;
+        transition: all .5s;
         &::before {
             content: '';
             position: absolute;
@@ -505,13 +508,75 @@
             right: 20px;
         }
         &:hover {
-            transform: translate(0, -10px);
+            transform: scale(1.2);
             border: 1px solid #fff;
-            background-color: #436372;
+            background-color: #83c4e2;
             color: #fff;
+            box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.603);
         }
     }
 }
 
+.design {
+    margin-top: 80px;
+    &__items {
+        display: grid;
+        min-height: 600px;
+        grid-template-columns: repeat(3, 2fr);
+        grid-template-rows: repeat(2, 2fr);
+        grid-gap: 30px;
+    }
+    .mixitup-control-active {
+        color: #292929;
+    }
+    &__item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-color: #f8f8f8;
+        padding: 50px 30px;
+        width: 370px;
+        height: 250px;
+        box-shadow: 0px 6px 47px 3px rgba(29, 29, 29, 0.377);
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            cursor: pointer;
+            border-radius: 20px;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(#436372, 0.3);
+            transition: all .8s;
+        }
+        &:hover:before {
+            opacity: 0;
+            box-shadow: 0px 6px 47px 3px rgba(137, 18, 153, 0.925);
+        }
+    }
+    &__title {
+        font-size: 20px;
+        @extend %dmsans-700;
+    }
+    &__text {
+        margin-top: 5px;
+        font-size: 16px;
+        @extend %dmsans-700;
+        color: #a3bbc8;
+        text-transform: uppercase;
+    }
+    &__popup {
+        margin-top: 80px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        min-height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 @import 'media';
-// <p class="product__text">Wooden radio </p><div class="product__price"><sup class="product__ye">$</sup>29.00</div>
