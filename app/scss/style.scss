@@ -345,6 +345,200 @@
     }
 }
 
+.modal {
+    margin: 100px auto 0;
+    max-width: 470px;
+    color: #306781;
+    @extend %rubik-400;
+    &__form {}
+    &__lebel {
+        display: block;
+        font-size: 14px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    &__input {
+        display: block;
+        width: 100%;
+        border: 1px solid #f6f6f6;
+        padding: 10px 0;
+    }
+    &__btn {
+        cursor: pointer;
+        overflow: hidden;
+        border: none;
+        background-color: #a3bbc8;
+        color: #fff;
+        @extend %rubik-500;
+        width: 100%;
+        padding: 20px 0;
+        margin: 20px 0;
+        transition: all .5s;
+        &:hover {
+            border: 1px solid #306781;
+            background-color: #fff;
+            color: #243f4d;
+            box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.486);
+        }
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #f6f6f6;
+    }
+    &__item-link {
+        color: #306781;
+        @extend %rubik-400;
+    }
+    &__link {
+        display: block;
+        margin-top: 20px;
+        color: #306781;
+        @extend %rubik-400;
+        text-align: center;
+    }
+    &__btn-item {
+        border: 2px solid #a3bbc8;
+        background-color: #fff;
+        color: #243f4d;
+        transition: all .5s;
+        &:hover {
+            background-color: #a3bbc8;
+            color: #fff;
+            @extend %rubik-500;
+            box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.486);
+        }
+    }
+}
+
+.about {
+    margin-top: 120px;
+    &__img {
+        object-fit: cover;
+        max-height: 680px;
+        max-width: 570px;
+    }
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__items {
+        max-width: 570px;
+    }
+    &__item {
+        display: block;
+        display: flex;
+        align-items: center;
+    }
+    &__top-smal {}
+    &__top-num {
+        @extend %rubik-500;
+        color: #a3bbc8;
+        font-size: 140px;
+    }
+    &__top-text {
+        font-size: 16px;
+        line-height: 30px;
+        @extend %rubik-400;
+        color: #243f4d;
+    }
+    &__content {
+        border-bottom: 1px solid #dadbdd;
+        padding-bottom: 30px;
+        position: relative;
+        z-index: -1;
+        &::after {
+            position: absolute;
+            content: '';
+            border: 1px solid #fff;
+            width: 30px;
+            height: 1px;
+            bottom: -1px;
+            right: 0;
+            z-index: 1;
+        }
+    }
+    &__content-title {
+        text-align: left;
+        margin-bottom: 40px;
+        @extend %rubik-400;
+    }
+    &__content-text {
+        font-size: 16px;
+        line-height: 30px;
+        @extend %rubik-400;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__info-item {
+        margin-top: 40px;
+        padding-left: 50px;
+        position: relative;
+    }
+    &__note::before {
+        content: '';
+        position: absolute;
+        background-image: url('../images/icons/note.svg');
+        width: 37px;
+        height: 38px;
+        top: 7px;
+        left: 0;
+    }
+    &__note::after {
+        content: '';
+        position: absolute;
+        border-right: 1px solid #dadbdd;
+        width: 1px;
+        height: 80px;
+        top: -10px;
+        right: -50px;
+    }
+    &__rupor::before {
+        content: '';
+        position: absolute;
+        background-image: url('../images/icons/Shape.svg');
+        width: 43px;
+        height: 40px;
+        top: 7px;
+        left: 0;
+    }
+    &__rupor::after {
+        content: '';
+        position: absolute;
+        border-right: 1px solid #dadbdd;
+        width: 1px;
+        height: 80px;
+        top: -10px;
+        right: -50px;
+    }
+    &__medal::before {
+        content: '';
+        position: absolute;
+        background-image: url('../images/icons/medal.svg');
+        width: 43px;
+        height: 40px;
+        top: 7px;
+        left: 0;
+    }
+    &__info-num {
+        color: #243f4d;
+        font-size: 36px;
+        line-height: 38px;
+        @extend %dmsans-700;
+    }
+    &__info-desc {
+        font-size: 16px;
+        line-height: 18px;
+        color: $default;
+        @extend %dmsans-700;
+        padding-left: 4px;
+    }
+}
+
 .service {
     background-color: #fef7f0;
     padding: 45px 0;
@@ -695,6 +889,10 @@
     &__link {
         padding: 102px 0;
     }
+}
+
+.partners--active {
+    margin-top: 100px;
 }
 
 @import 'media';

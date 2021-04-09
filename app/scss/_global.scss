@@ -1,15 +1,11 @@
-.wrapper {
+body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-.content {
-    flex: 1 0 auto;
-}
-
-.footer {
-    flex: 0 0 auto;
+.wrapper {
+    flex-grow: 1;
 }
 
 .container {
@@ -37,4 +33,39 @@ a {
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+.breadcrumbs {
+    margin-top: 115px;
+    text-align: center;
+    padding: 30px 0;
+    background: #edf1f4;
+    &__list {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        margin: 10px 10px 0;
+        color: #727272;
+        position: relative;
+        &::after {
+            content: '/';
+            position: absolute;
+            width: 7px;
+            height: 12px;
+            top: 2px;
+            right: -13px;
+        }
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &__link {
+        @extend %rubik-400;
+        font-size: 14px;
+        line-height: 24px;
+    }
 }
