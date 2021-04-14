@@ -36,3 +36,11 @@ $infotext:#243f4d;
 @function min($numbers...) {
     @return m#{i}n(#{$numbers});
 }
+
+%checkbox {
+    background-color: #edf1f4;
+    color: $infotext;
+    padding: 15px 15px;
+    @extend %rubik-400;
+    font-size: 16px;
+}

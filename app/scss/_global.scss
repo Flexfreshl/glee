@@ -47,7 +47,7 @@ a {
     }
     &__item {
         margin: 10px 10px 0;
-        color: #727272;
+        color: $title;
         position: relative;
         &::after {
             content: '/';
@@ -67,5 +67,44 @@ a {
         @extend %rubik-400;
         font-size: 14px;
         line-height: 24px;
+        padding: 1px 5px;
+        background-color: #fff;
+        border-radius: 20px;
+    }
+    &__link-list {
+        background: -webkit-linear-gradient(45deg, rgb(132, 240, 235) 17%, rgb(66, 242, 195) 62%);
+        background: -moz-linear-gradient(45deg, rgb(132, 240, 235) 17%, rgb(66, 242, 195) 62%);
+        background: linear-gradient(45deg, rgb(132, 240, 235) 17%, rgb(66, 242, 195) 62%);
+    }
+}
+
+.pagination {
+    &.pagination--list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item+.pagination__item {
+        margin-left: 15px;
+    }
+    &__link {
+        border: 1px solid #a3bbc8;
+        padding: 8px 15px;
+        font-size: 16px;
+        @extend %rubik-400;
+        color: $infotext;
+    }
+    &__link--active {
+        background-color: #a3bbc8;
+        color: #fff;
     }
 }
