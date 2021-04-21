@@ -84,6 +84,5 @@ $(function() {
 
     var mixer1 = mixitup(containerEl1, config);
     var mixer2 = mixitup(containerEl2, config);
-    // var mixer = mixitup('.product__items');
+
 });
-// id="MixItUpAFD5FC"
