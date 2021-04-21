@@ -1523,7 +1523,9 @@
         left: 0;
         height: 50px;
         width: 270px;
-        background: #a3bbc8;
+        background: -webkit-linear-gradient(135deg, rgb(168, 229, 238), rgb(163, 187, 200), rgb(213, 216, 208));
+        background: -moz-linear-gradient(135deg, rgb(168, 229, 238), rgb(163, 187, 200), rgb(213, 216, 208));
+        background: linear-gradient(135deg, rgb(168, 229, 238), rgb(163, 187, 200), rgb(213, 216, 208));
         border-radius: 10px;
         display: flex;
         justify-content: center;
@@ -1549,6 +1551,51 @@
         font-size: 16px;
         line-height: 30px;
     }
+    &__text-min {
+        color: #243f4d;
+        margin-bottom: 10px;
+        @extend %rubik-500;
+        font-size: 16px;
+        line-height: 30px;
+        display: block;
+    }
+    &__blockquote {
+        background-color: #edf1f4;
+        padding: 30px;
+        border-left: 3px solid #306781;
+        margin-bottom: 30px;
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #243f4d;
+        span {
+            display: block;
+            padding-top: 20px;
+            padding-left: 40px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                border-top: 2px solid #306781;
+                height: 3px;
+                width: 20px;
+                left: 8px;
+                bottom: 12px;
+            }
+        }
+    }
+    &__box-min {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &__images {
+        width: 320px;
+        height: 210px;
+        object-fit: cover;
+        margin-right: 30px;
+    }
     &__link {
         padding: 20px 80px 20px 20px;
         border: 1px solid #6a93aa;
@@ -1573,6 +1620,116 @@
             border: 1px solid #fff;
             background-color: #83c4e2;
             color: #fff;
+        }
+    }
+    &__form-title {
+        font-size: 24px;
+        line-height: 30px;
+        @extend %dmsans-700;
+        color: #436372;
+        margin-bottom: 30px;
+    }
+    &__form-input {
+        width: 398px;
+        padding: 10px;
+        border: 1px solid #9f9f9f;
+    }
+    &__form-input--human {
+        background: url(../images/icons/human.svg) no-repeat 356px 10px;
+        background-size: auto 50%;
+        &:focus {
+            background: none;
+        }
+    }
+    &__form-input--message {
+        background: url(../images/icons/pismo.svg) no-repeat 356px 12px;
+        background-size: auto 40%;
+        &:focus {
+            background: none;
+        }
+    }
+    &__form-input+&__form-input {
+        margin-left: 30px;
+    }
+    &__form-textarea {
+        border: 1px solid #9f9f9f;
+        margin-top: 20px;
+        resize: none;
+        height: 112px;
+        width: 100%;
+        padding: 10px;
+    }
+    &__form-btn {
+        margin-top: 20px;
+        padding: 15px 30px;
+        background: -webkit-linear-gradient(135deg, rgb(168, 229, 238), rgb(163, 187, 200), rgb(213, 216, 208));
+        background: -moz-linear-gradient(135deg, rgb(168, 229, 238), rgb(163, 187, 200), rgb(213, 216, 208));
+        background: linear-gradient(135deg, rgb(168, 229, 238), rgb(163, 187, 200), rgb(213, 216, 208));
+        border: 1px solid #a3bbc8;
+        outline: none;
+        color: #fff;
+        @extend %rubik-500;
+        cursor: pointer;
+        transition: all .4s;
+        &:hover {
+            background: #fff;
+            border: 1px solid #a3bbc8;
+            outline: none;
+            color: #a3bbc8;
+        }
+    }
+}
+
+.blog-comments {
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #929090;
+        border-bottom: 1px solid #929090;
+        padding: 30px 0;
+        margin-bottom: 30px;
+    }
+    &__left-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__img {
+        margin-right: 20px;
+        width: 75px;
+        height: 75px;
+        object-fit: cover;
+    }
+    &__name {
+        @extend %rubik-500;
+        font-size: 20px;
+        line-height: 30px;
+        color: #000;
+    }
+    &__position {
+        @extend %rubik-400;
+        line-height: 30px;
+        font-size: 16px;
+        color: rgb(129, 125, 125);
+    }
+    &__share {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+    }
+    &__share-item+&__share-item {
+        margin-left: 15px;
+    }
+    &__share-link {
+        path {
+            fill: $default;
+            transition: all .4s;
+        }
+        &:hover {
+            path {
+                fill: #4551c3;
+            }
         }
     }
 }
